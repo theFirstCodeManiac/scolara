@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;850&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-neutral text-text font-sans antialiased selection:bg-primary/30 selection:text-primary-light;
+    font-family: 'Outfit', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 dark:bg-gray-900/70 dark:border-gray-800/50;
+  }
+  
+  /* Cyber futuristic glowing styles */
+  .cyber-glow-primary {
+    box-shadow: 0 0 25px rgba(99, 102, 241, 0.15);
+  }
+  .cyber-glow-accent {
+    box-shadow: 0 0 25px rgba(236, 72, 153, 0.15);
+  }
+  .cyber-border {
+    @apply border border-gray-200 dark:border-gray-800 hover:border-primary/45 dark:hover:border-primary/45 transition-all duration-300;
+  }
+  .cyber-grid {
+    background-image: linear-gradient(to right, rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+    background-size: 3rem 3rem;
+  }
+}
