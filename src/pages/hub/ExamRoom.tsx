@@ -41,8 +41,8 @@ export const ExamRoom: React.FC = () => {
   const [showConfirm, setShowConfirm] = useState(false);
   const [showInstructions, setShowInstructions] = useState(true);
 
-  const timerRef = useRef<NodeJS.Timeout>();
-  const autoSaveRef = useRef<NodeJS.Timeout>();
+  const timerRef = useRef<ReturnType<typeof setInterval>>();
+  const autoSaveRef = useRef<ReturnType<typeof setTimeout>>();
 
   useEffect(() => {
     fetchExamData();
