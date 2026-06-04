@@ -85,8 +85,7 @@ export const MobileAppPopup: React.FC = () => {
               {/* Action Buttons */}
               <div className="flex flex-col gap-3">
                 <a
-                  href="/Scolara.apk"
-                  download="Scolara_Mobile_App.apk"
+                  href="https://github.com/theFirstCodeManiac/scolara/releases/latest/download/Scolara.apk"
                   onClick={handleDownload}
                   className="w-full flex items-center justify-center gap-2 py-3.5 bg-white text-black font-bold rounded-xl hover:bg-gray-200 transition-colors shadow-lg shadow-white/10"
                 >
