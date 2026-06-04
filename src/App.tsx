@@ -12,6 +12,7 @@ import { PrivacyPolicy } from './pages/public/PrivacyPolicy';
 import { TermsOfService } from './pages/public/TermsOfService';
 import { CookiePolicy } from './pages/public/CookiePolicy';
 import { useHub } from './context/HubContext';
+import { MobileAppPopup } from './components/shared/MobileAppPopup';
 
 // Lazy load dashboard components
 const Dashboard = React.lazy(() => import('./pages/dashboard/Dashboard').then(m => ({ default: m.Dashboard })));
@@ -58,6 +59,7 @@ const ProfileDispatcher = () => {
 function App() {
   return (
     <BrowserRouter>
+      <MobileAppPopup />
       <React.Suspense fallback={<div className="min-h-screen bg-neutral dark:bg-gray-900 flex items-center justify-center"><div className="animate-spin w-8 h-8 border-4 border-primary border-t-transparent rounded-full"></div></div>}>
         <Routes>
           {/* Public Routes */}
